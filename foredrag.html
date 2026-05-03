@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foredrag — Your Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #faf8f4; --ink: #1a1a18; --ink-mid: #4a4a46; --ink-light: #8a8a84;
+      --rule: #d8d4cc; --accent: #3a5a8a; --accent-light: #e8eef5;
+      --serif: 'EB Garamond', Georgia, serif; --sans: 'DM Sans', system-ui, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--cream); color: var(--ink); font-family: var(--serif); font-size: 17px; line-height: 1.75; }
+    .page-wrap { max-width: 860px; margin: 0 auto; padding: 0 2rem; }
+    nav { border-bottom: 1px solid var(--rule); background: rgba(250,248,244,0.93); }
+    nav .page-wrap { display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; padding-bottom: 1rem; }
+    .nav-name { font-family: var(--serif); font-size: 1.05rem; letter-spacing: 0.02em; color: var(--ink); text-decoration: none; }
+    .nav-back { font-family: var(--sans); font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-mid); text-decoration: none; transition: color 0.2s; }
+    .nav-back:hover { color: var(--accent); }
+    .page-header { padding: 4rem 0 3rem; border-bottom: 1px solid var(--rule); }
+    .page-header h1 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 400; line-height: 1.2; margin-bottom: 0.6rem; }
+    .page-header .subtitle { font-family: var(--sans); font-size: 0.88rem; color: var(--ink-light); }
+    section { padding: 3.5rem 0; border-bottom: 1px solid var(--rule); }
+    section:last-of-type { border-bottom: none; }
+    .section-label { font-family: var(--sans); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 2rem; }
+    h2 { font-family: var(--serif); font-size: 1.5rem; font-weight: 400; margin-bottom: 1.2rem; }
+    p { margin-bottom: 1rem; }
+    p:last-child { margin-bottom: 0; }
+    .foredrag-list { list-style: none; }
+    .foredrag-item { padding: 1.5rem 0; border-bottom: 1px solid var(--rule); }
+    .foredrag-item:first-child { border-top: 1px solid var(--rule); }
+    .foredrag-tittel { font-family: var(--serif); font-size: 1.1rem; font-style: italic; margin-bottom: 0.4rem; }
+    .foredrag-ingress { font-size: 1rem; color: var(--ink-mid); margin-bottom: 0.5rem; }
+    .foredrag-meta { font-family: var(--sans); font-size: 0.8rem; color: var(--ink-light); }
+    .kontakt-knapp { display: inline-block; margin-top: 2rem; font-family: var(--sans); font-size: 0.82rem; letter-spacing: 0.04em; color: var(--accent); border: 1px solid var(--accent); padding: 0.5rem 1.2rem; border-radius: 2px; text-decoration: none; transition: background 0.2s, color 0.2s; }
+    .kontakt-knapp:hover { background: var(--accent); color: var(--cream); }
+    footer { padding: 2.5rem 0; border-top: 1px solid var(--rule); }
+    footer p { font-family: var(--sans); font-size: 0.78rem; color: var(--ink-light); margin: 0; }
+    @media (max-width: 640px) { .nav-links { gap: 1rem; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="page-wrap">
+      <a href="index.html" class="nav-name">Your Name</a>
+      <a href="index.html" class="nav-back">← Tilbake</a>
+    </div>
+  </nav>
+
+  <div class="page-wrap">
+
+    <div class="page-header">
+      <h1>Foredrag</h1>
+      <p class="subtitle">Populærvitenskapelige og faglige foredrag på norsk</p>
+    </div>
+
+    <section>
+      <p class="section-label">Om foredragene</p>
+      <p>
+        Jeg holder foredrag for ulike målgrupper — fra videregående skole og allmenndannende arrangement til faglige seminarer og konferanser. Foredragene kan tilpasses nivå og lengde etter behov.
+      </p>
+      <p>
+        Ta gjerne kontakt for mer informasjon, eller for å diskutere et foredrag tilpasset din organisasjon eller ditt arrangement.
+      </p>
+    </section>
+
+    <section>
+      <p class="section-label">Aktuelle foredrag</p>
+      <ul class="foredrag-list">
+
+        <li class="foredrag-item">
+          <p class="foredrag-tittel">Tittel på foredrag 1</p>
+          <p class="foredrag-ingress">
+            [Kort beskrivelse av innholdet i foredraget — hva handler det om, og hvem passer det for? En til to setninger er nok her.]
+          </p>
+          <p class="foredrag-meta">Passer for: [målgruppe] · Varighet: ca. [X] minutter</p>
+        </li>
+
+        <li class="foredrag-item">
+          <p class="foredrag-tittel">Tittel på foredrag 2</p>
+          <p class="foredrag-ingress">
+            [Kort beskrivelse av innholdet. Hva er temaet, og hva vil publikum sitte igjen med etterpå?]
+          </p>
+          <p class="foredrag-meta">Passer for: [målgruppe] · Varighet: ca. [X] minutter</p>
+        </li>
+
+        <li class="foredrag-item">
+          <p class="foredrag-tittel">Tittel på foredrag 3</p>
+          <p class="foredrag-ingress">
+            [Beskrivelse av dette foredraget. Gjerne nevne eventuell demo, praktisk innslag eller diskusjon som inngår.]
+          </p>
+          <p class="foredrag-meta">Passer for: [målgruppe] · Varighet: ca. [X] minutter</p>
+        </li>
+
+      </ul>
+    </section>
+
+    <section>
+      <p class="section-label">Praktisk informasjon</p>
+      <p>
+        Jeg holder foredrag over hele landet, og kan også stille til digitale arrangement. Honorar avtales individuelt avhengig av type arrangement, reisetid og forberedelsestid.
+      </p>
+      <p>
+        For booking og spørsmål, send e-post til <a href="mailto:you@university.edu" style="color: var(--accent);">you@university.edu</a>.
+      </p>
+      <a class="kontakt-knapp" href="mailto:you@university.edu">Ta kontakt</a>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="page-wrap">
+      <p>© 2025 Your Name</p>
+    </div>
+  </footer>
+
+</body>
+</html>

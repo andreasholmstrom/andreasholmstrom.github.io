@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research — Your Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #faf8f4; --ink: #1a1a18; --ink-mid: #4a4a46; --ink-light: #8a8a84;
+      --rule: #d8d4cc; --accent: #3a5a8a; --accent-light: #e8eef5;
+      --serif: 'EB Garamond', Georgia, serif; --sans: 'DM Sans', system-ui, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--cream); color: var(--ink); font-family: var(--serif); font-size: 17px; line-height: 1.75; }
+    .page-wrap { max-width: 860px; margin: 0 auto; padding: 0 2rem; }
+    nav { border-bottom: 1px solid var(--rule); position: sticky; top: 0; background: rgba(250,248,244,0.93); backdrop-filter: blur(6px); z-index: 100; }
+    nav .page-wrap { display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; padding-bottom: 1rem; }
+    .nav-name { font-family: var(--serif); font-size: 1.05rem; letter-spacing: 0.02em; color: var(--ink); text-decoration: none; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-family: var(--sans); font-size: 0.8rem; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-mid); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+    .page-header { padding: 4rem 0 3rem; border-bottom: 1px solid var(--rule); }
+    .page-header h1 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 400; line-height: 1.2; margin-bottom: 0.6rem; }
+    .page-header .subtitle { font-family: var(--sans); font-size: 0.88rem; color: var(--ink-light); }
+    section { padding: 3.5rem 0; border-bottom: 1px solid var(--rule); }
+    section:last-of-type { border-bottom: none; }
+    .section-label { font-family: var(--sans); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 2rem; }
+    h2 { font-family: var(--serif); font-size: 1.5rem; font-weight: 400; margin-bottom: 1.2rem; }
+    p { margin-bottom: 1rem; }
+    p:last-child { margin-bottom: 0; }
+    .pub-list { list-style: none; }
+    .pub-item { padding: 1.4rem 0; border-bottom: 1px solid var(--rule); }
+    .pub-item:first-child { border-top: 1px solid var(--rule); }
+    .pub-title { font-family: var(--serif); font-size: 1.05rem; font-style: italic; color: var(--ink); margin-bottom: 0.3rem; }
+    .pub-title a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--rule); transition: border-color 0.2s, color 0.2s; }
+    .pub-title a:hover { color: var(--accent); border-color: var(--accent); }
+    .pub-meta { font-family: var(--sans); font-size: 0.82rem; color: var(--ink-mid); }
+    .pub-year { display: inline-block; font-family: var(--sans); font-size: 0.75rem; font-weight: 500; color: var(--accent); background: var(--accent-light); padding: 0.1rem 0.55rem; border-radius: 2px; margin-right: 0.5rem; vertical-align: middle; }
+    footer { padding: 2.5rem 0; border-top: 1px solid var(--rule); }
+    footer p { font-family: var(--sans); font-size: 0.78rem; color: var(--ink-light); margin: 0; }
+    @media (max-width: 640px) { .nav-links { gap: 1rem; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="page-wrap">
+      <a href="index.html" class="nav-name">Your Name</a>
+      <ul class="nav-links">
+        <li><a href="index.html">About</a></li>
+        <li><a href="research.html" class="active">Research</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="talks.html">Talks</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-wrap">
+
+    <div class="page-header">
+      <h1>Research</h1>
+      <p class="subtitle">Publications, preprints &amp; ongoing work</p>
+    </div>
+
+    <section>
+      <p class="section-label">Research Interests</p>
+      <p>
+        My research lies at the intersection of [area A] and [area B]. I am particularly interested in [specific question or theme], and how it connects to broader questions in [related field].
+      </p>
+      <p>
+        Current projects include [brief description of project 1] and [brief description of project 2]. I am always happy to discuss potential collaborations — feel free to get in touch.
+      </p>
+    </section>
+
+    <section>
+      <p class="section-label">Publications</p>
+      <ul class="pub-list">
+
+        <li class="pub-item">
+          <p class="pub-title"><a href="#">Title of Your Most Recent Paper</a></p>
+          <p class="pub-meta">
+            <span class="pub-year">2024</span>
+            Your Name, Co-Author Name.
+            <em>Journal of [Field]</em>, Vol. X, No. Y, pp. 1–20.
+          </p>
+        </li>
+
+        <li class="pub-item">
+          <p class="pub-title"><a href="#">Title of Another Paper</a></p>
+          <p class="pub-meta">
+            <span class="pub-year">2023</span>
+            Your Name.
+            <em>Proceedings of [Conference Name]</em>.
+          </p>
+        </li>
+
+        <li class="pub-item">
+          <p class="pub-title"><a href="#">Title of an Earlier Work</a></p>
+          <p class="pub-meta">
+            <span class="pub-year">2022</span>
+            Your Name, Co-Author Name, Another Author.
+            <em>Journal of [Field]</em>, Vol. A, No. B, pp. 100–130.
+          </p>
+        </li>
+
+        <li class="pub-item">
+          <p class="pub-title"><a href="#">Your PhD Thesis or Book Chapter</a></p>
+          <p class="pub-meta">
+            <span class="pub-year">2020</span>
+            Your Name. <em>Publisher / Dissertation</em>.
+          </p>
+        </li>
+
+      </ul>
+    </section>
+
+    <section>
+      <p class="section-label">Preprints</p>
+      <ul class="pub-list">
+        <li class="pub-item">
+          <p class="pub-title"><a href="#">Title of Preprint or Work in Progress</a></p>
+          <p class="pub-meta">
+            <span class="pub-year">2025</span>
+            Your Name, Co-Author Name. Preprint on <a href="https://arxiv.org" target="_blank" style="color: var(--accent);">arXiv</a>.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="page-wrap">
+      <p>© 2025 Your Name · Hosted on <a href="https://pages.github.com" style="color: var(--ink-mid);">GitHub Pages</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

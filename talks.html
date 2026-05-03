@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Talks — Your Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #faf8f4; --ink: #1a1a18; --ink-mid: #4a4a46; --ink-light: #8a8a84;
+      --rule: #d8d4cc; --accent: #3a5a8a; --accent-light: #e8eef5;
+      --serif: 'EB Garamond', Georgia, serif; --sans: 'DM Sans', system-ui, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--cream); color: var(--ink); font-family: var(--serif); font-size: 17px; line-height: 1.75; }
+    .page-wrap { max-width: 860px; margin: 0 auto; padding: 0 2rem; }
+    nav { border-bottom: 1px solid var(--rule); position: sticky; top: 0; background: rgba(250,248,244,0.93); backdrop-filter: blur(6px); z-index: 100; }
+    nav .page-wrap { display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; padding-bottom: 1rem; }
+    .nav-name { font-family: var(--serif); font-size: 1.05rem; letter-spacing: 0.02em; color: var(--ink); text-decoration: none; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-family: var(--sans); font-size: 0.8rem; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-mid); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+    .page-header { padding: 4rem 0 3rem; border-bottom: 1px solid var(--rule); }
+    .page-header h1 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 400; line-height: 1.2; margin-bottom: 0.6rem; }
+    .page-header .subtitle { font-family: var(--sans); font-size: 0.88rem; color: var(--ink-light); }
+    section { padding: 3.5rem 0; border-bottom: 1px solid var(--rule); }
+    section:last-of-type { border-bottom: none; }
+    .section-label { font-family: var(--sans); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 2rem; }
+    p { margin-bottom: 1rem; }
+    p:last-child { margin-bottom: 0; }
+    .talk-list { list-style: none; }
+    .talk-item { display: grid; grid-template-columns: 100px 1fr; gap: 1rem 2rem; padding: 1.2rem 0; border-bottom: 1px solid var(--rule); align-items: start; }
+    .talk-item:first-child { border-top: 1px solid var(--rule); }
+    .talk-date { font-family: var(--sans); font-size: 0.78rem; color: var(--ink-light); padding-top: 0.15rem; }
+    .talk-title { font-family: var(--serif); font-size: 1rem; font-style: italic; margin-bottom: 0.25rem; }
+    .talk-title a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--rule); transition: border-color 0.2s, color 0.2s; }
+    .talk-title a:hover { color: var(--accent); border-color: var(--accent); }
+    .talk-venue { font-family: var(--sans); font-size: 0.82rem; color: var(--ink-mid); }
+    .talk-tag { display: inline-block; font-family: var(--sans); font-size: 0.7rem; font-weight: 500; padding: 0.05rem 0.45rem; border-radius: 2px; margin-left: 0.4rem; vertical-align: middle; }
+    .tag-invited { background: var(--accent-light); color: var(--accent); }
+    .tag-upcoming { background: #eef5ee; color: #3a6a3a; }
+    .talk-image { width: 100%; aspect-ratio: 16 / 7; object-fit: cover; display: block; border-radius: 4px; background: var(--accent-light); }
+    .talk-image-placeholder { width: 100%; aspect-ratio: 16 / 7; background: var(--accent-light); border-radius: 4px; display: flex; align-items: center; justify-content: center; border: 1px dashed var(--rule); }
+    .talk-image-placeholder span { font-family: var(--sans); font-size: 0.78rem; color: var(--ink-light); }
+    .image-caption { font-family: var(--sans); font-size: 0.78rem; color: var(--ink-light); margin-top: 0.6rem; }
+    footer { padding: 2.5rem 0; border-top: 1px solid var(--rule); }
+    footer p { font-family: var(--sans); font-size: 0.78rem; color: var(--ink-light); margin: 0; }
+    @media (max-width: 640px) {
+      .nav-links { gap: 1rem; }
+      .talk-item { grid-template-columns: 1fr; gap: 0.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="page-wrap">
+      <a href="index.html" class="nav-name">Your Name</a>
+      <ul class="nav-links">
+        <li><a href="index.html">About</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="talks.html" class="active">Talks</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-wrap">
+
+    <div class="page-header">
+      <h1>Talks</h1>
+      <p class="subtitle">Invited lectures, conference presentations &amp; seminars</p>
+    </div>
+
+    <section>
+      <p class="section-label">Image</p>
+      <!-- Replace the placeholder div with: <img src="talks-photo.jpg" alt="Description" class="talk-image" /> -->
+      <div class="talk-image-placeholder">
+        <span>Replace with your image — recommended size: 1400 × 600 px</span>
+      </div>
+      <p class="image-caption">[Optional caption or credit]</p>
+    </section>
+
+    <section>
+      <p class="section-label">Upcoming</p>
+      <ul class="talk-list">
+        <li class="talk-item">
+          <span class="talk-date">Sep 2025</span>
+          <div>
+            <p class="talk-title">
+              <a href="#">Title of Upcoming Talk</a>
+              <span class="talk-tag tag-upcoming">Upcoming</span>
+            </p>
+            <p class="talk-venue">[Conference or Seminar Name], [City, Country]</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <p class="section-label">Selected Talks</p>
+      <ul class="talk-list">
+
+        <li class="talk-item">
+          <span class="talk-date">Mar 2025</span>
+          <div>
+            <p class="talk-title">
+              <a href="#">Title of Invited Talk</a>
+              <span class="talk-tag tag-invited">Invited</span>
+            </p>
+            <p class="talk-venue">[Workshop or Seminar Name], [Institution], [City]</p>
+          </div>
+        </li>
+
+        <li class="talk-item">
+          <span class="talk-date">Nov 2024</span>
+          <div>
+            <p class="talk-title"><a href="#">Title of Conference Talk</a></p>
+            <p class="talk-venue">[Conference Name], [City, Country]</p>
+          </div>
+        </li>
+
+        <li class="talk-item">
+          <span class="talk-date">Jun 2024</span>
+          <div>
+            <p class="talk-title">
+              <a href="#">Title of Plenary or Keynote</a>
+              <span class="talk-tag tag-invited">Invited</span>
+            </p>
+            <p class="talk-venue">[Event Name], [City, Country]</p>
+          </div>
+        </li>
+
+        <li class="talk-item">
+          <span class="talk-date">Feb 2024</span>
+          <div>
+            <p class="talk-title"><a href="#">Title of Seminar Talk</a></p>
+            <p class="talk-venue">[Department] Seminar, [University Name]</p>
+          </div>
+        </li>
+
+        <li class="talk-item">
+          <span class="talk-date">Oct 2023</span>
+          <div>
+            <p class="talk-title"><a href="#">Title of Earlier Talk</a></p>
+            <p class="talk-venue">[Conference Name], [City, Country]</p>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="page-wrap">
+      <p>© 2025 Your Name · Hosted on <a href="https://pages.github.com" style="color: var(--ink-mid);">GitHub Pages</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

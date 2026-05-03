@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #faf8f4; --ink: #1a1a18; --ink-mid: #4a4a46; --ink-light: #8a8a84;
+      --rule: #d8d4cc; --accent: #3a5a8a; --accent-light: #e8eef5;
+      --serif: 'EB Garamond', Georgia, serif; --sans: 'DM Sans', system-ui, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--cream); color: var(--ink); font-family: var(--serif); font-size: 17px; line-height: 1.75; }
+    .page-wrap { max-width: 860px; margin: 0 auto; padding: 0 2rem; }
+    nav { border-bottom: 1px solid var(--rule); position: sticky; top: 0; background: rgba(250,248,244,0.93); backdrop-filter: blur(6px); z-index: 100; }
+    nav .page-wrap { display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; padding-bottom: 1rem; }
+    .nav-name { font-family: var(--serif); font-size: 1.05rem; letter-spacing: 0.02em; color: var(--ink); text-decoration: none; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-family: var(--sans); font-size: 0.8rem; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-mid); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+    header { padding: 5rem 0 4rem; border-bottom: 1px solid var(--rule); }
+    .header-inner { display: block; }
+    .header-text h1 { font-family: var(--serif); font-size: clamp(2.4rem, 5vw, 3.4rem); font-weight: 400; line-height: 1.15; letter-spacing: -0.01em; margin-bottom: 0.6rem; }
+    .header-text .title-line { font-family: var(--sans); font-size: 0.9rem; font-weight: 300; letter-spacing: 0.05em; color: var(--ink-mid); margin-bottom: 1.4rem; }
+    .header-text .bio-short { font-size: 1.05rem; color: var(--ink-mid); max-width: 520px; line-height: 1.7; }
+    .header-links { display: flex; gap: 1.2rem; margin-top: 1.8rem; flex-wrap: wrap; }
+    .header-links a { font-family: var(--sans); font-size: 0.8rem; letter-spacing: 0.04em; color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; padding-bottom: 1px; transition: border-color 0.2s; }
+    .header-links a:hover { border-color: var(--accent); }
+    section { padding: 3.5rem 0; border-bottom: 1px solid var(--rule); }
+    section:last-of-type { border-bottom: none; }
+    .section-label { font-family: var(--sans); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 2rem; }
+    h2 { font-family: var(--serif); font-size: 1.6rem; font-weight: 400; margin-bottom: 1.2rem; }
+    p { margin-bottom: 1rem; }
+    p:last-child { margin-bottom: 0; }
+    .project-list { list-style: none; }
+    .project-item { padding: 1.4rem 0; border-bottom: 1px solid var(--rule); }
+    .project-item:first-child { border-top: 1px solid var(--rule); }
+    .project-name { font-family: var(--serif); font-size: 1.1rem; font-weight: 500; margin-bottom: 0.35rem; }
+    .project-name a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--rule); transition: border-color 0.2s, color 0.2s; }
+    .project-name a:hover { color: var(--accent); border-color: var(--accent); }
+    .project-desc { font-size: 1rem; color: var(--ink-mid); margin: 0; }
+    footer { padding: 2.5rem 0; border-top: 1px solid var(--rule); }
+    footer p { font-family: var(--sans); font-size: 0.78rem; color: var(--ink-light); margin: 0; }
+    @media (max-width: 640px) {
+      .header-inner { grid-template-columns: 1fr; }
+      .header-photo { width: 100px; height: 100px; order: -1; }
+      .nav-links { gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="page-wrap">
+      <a href="index.html" class="nav-name">Your Name</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">About</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="talks.html">Talks</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-wrap">
+
+    <header id="about">
+      <div class="header-inner">
+        <div class="header-text">
+          <h1>Your Full Name</h1>
+          <p class="title-line">Professor of [Field] · [University Name]</p>
+          <p class="bio-short">
+            Welcome. I am a researcher in [your field] at [Institution]. My work focuses on [brief research interest], with a particular interest in [specific topic]. I am also interested in [secondary interest].
+          </p>
+          <p class="bio-short" style="margin-top: 0.8rem;">
+            Before joining [Institution], I held positions at [previous institutions]. I received my PhD from [university] in [year].
+          </p>
+          <div class="header-links">
+            <a href="mailto:you@university.edu">you@university.edu</a>
+            <a href="https://scholar.google.com" target="_blank">Google Scholar</a>
+            <a href="https://orcid.org" target="_blank">ORCID</a>
+            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+            <a href="https://twitter.com/yourhandle" target="_blank">Twitter/X</a>
+          </div>
+      </div>
+    </header>
+
+    <!-- Current Projects -->
+    <section id="projects">
+      <p class="section-label">Current Projects</p>
+      <ul class="project-list">
+
+        <li class="project-item">
+          <p class="project-name"><a href="https://peakmath.org" target="_blank">PeakMath</a></p>
+          <p class="project-desc">
+            PeakMath is a project dedicated to [brief description of mission — e.g. making advanced mathematical ideas accessible to a broader audience, or bridging research mathematics and education]. It brings together [researchers / educators / students] around [core activity or goal].
+          </p>
+        </li>
+
+        <li class="project-item">
+          <p class="project-name"><a href="#">AAMS</a></p>
+          <p class="project-desc">
+            [Brief description of AAMS — what it stands for, what it does, and who it involves. Replace this placeholder with a short description of the project and its goals.]
+          </p>
+        </li>
+
+        <!-- Add further project items here following the same pattern -->
+
+      </ul>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="page-wrap">
+      <p>© 2025 Your Name · Hosted on <a href="https://pages.github.com" style="color: var(--ink-mid);">GitHub Pages</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

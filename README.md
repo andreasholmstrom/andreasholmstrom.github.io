@@ -2,9 +2,10 @@
 
 Personal academic website for Andreas Holmstrom, hosted on [GitHub Pages](https://pages.github.com).
 
-Live site: [andreasholmstrom.github.io](https://andreasholmstrom.github.io)
+Live site: [andreasholmstrom.xyz](https://andreasholmstrom.xyz/), which points to [andreasholmstrom.github.io](https://andreasholmstrom.github.io)
 
-## Structure
+
+## Structure (as of May 2026)
 
 | File | Description |
 |------|-------------|
@@ -12,7 +13,7 @@ Live site: [andreasholmstrom.github.io](https://andreasholmstrom.github.io)
 | `research.html` | Publications and research interests |
 | `teaching.html` | Courses and past students |
 | `talks.html` | Invited talks and presentations |
-| `contact.html` | Contact details and office information |
+| `contact.html` | Contact details |
 | `foredrag.html` | Norwegian-language talks page |
 | `stripe.html` | Payment page |
 
